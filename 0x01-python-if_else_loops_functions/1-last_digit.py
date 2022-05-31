@@ -8,7 +8,10 @@ elif (number < 0):
     modulus = (-number) % 10
 if (modulus > 5):
     print(a.format(number, modulus, "greater than 5"))
-elif (modulus % 10 == 0):
+elif (modulus == 0):
     print(a.format(number, modulus, "0"))
-elif (modulus % 10 < 6 and (number % 10) != 0):
-    print(a.format(number, modulus, "less than 6 and not 0"))
+elif (modulus < 6 and (number % 10) != 0):
+    if (number < 0):
+        print(a.format(number, -modulus, "less than 6 and not 0"))
+    else:
+        print(a.format(number, modulus, "less than 6 and not 0"))
